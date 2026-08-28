@@ -1,6 +1,7 @@
-import gymnasium as gym
 import gym_tetris
-from nes_py.play import play_human
+from nes_py.app.play_human import play_human
 
-env = gym.make('TetrisA-v0', render_mode=None)
+env = gym_tetris.make('TetrisA-v0')
 play_human(env)
+state, reward, done, info = env
+print(reward)
